@@ -4,8 +4,8 @@ module.exports = function check(str, bracketsConfig) {
         for (let j=0; j<bracketsConfig.length; j++) {
             if (str[i]==bracketsConfig[j][0]&&str[i+1]==bracketsConfig[j][1]) {
                 str.splice (i, 2);
-                i=0;
-                j=0;
+                i=-1;
+                j=-1;
             }
         }
     }
